@@ -1,5 +1,5 @@
 # PoolTogether Aave v3 contest details
-- $25,500 USDC main award pot
+- $20,500 USDC main award pot
 - $1,500 USDC gas optimization award pot
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-04-PoolTogether-Aave-v3-contest/submit)
