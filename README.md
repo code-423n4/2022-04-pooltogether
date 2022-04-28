@@ -1,68 +1,5 @@
-# ✨ So you want to sponsor a contest
-
-This `README.md` contains a set of checklists for our contest collaboration.
-
-Your contest will use two repos: 
-- **a _contest_ repo** (this one), which is used for scoping your contest and for providing information to contestants (wardens)
-- **a _findings_ repo**, where issues are submitted. 
-
-Ultimately, when we launch the contest, this contest repo will be made public and will contain the smart contracts to be reviewed and all the information needed for contest participants. The findings repo will be made public after the contest is over and your team has mitigated the identified issues.
-
-Some of the checklists in this doc are for **C4 (🐺)** and some of them are for **you as the contest sponsor (⭐️)**.
-
----
-
-# Contest setup
-
-## 🐺 C4: Set up repos
-- [ ] Create a new private repo named `YYYY-MM-sponsorname` using this repo as a template.
-- [ ] Add sponsor to this private repo with 'maintain' level access.
-- [ ] Send the sponsor contact the url for this repo to follow the instructions below and add contracts here. 
-- [ ] Delete this checklist and wait for sponsor to complete their checklist.
-
-## ⭐️ Sponsor: Provide contest details
-
-Under "SPONSORS ADD INFO HERE" heading below, include the following:
-
-- [ ] Name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-- [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [ ] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
-- [ ] Describe anything else that adds any special logic that makes your approach unique
-- [ ] Identify any areas of specific concern in reviewing the code
-- [ ] Add all of the code to this repo that you want reviewed
-- [ ] Create a PR to this repo with the above changes.
-
----
-
-# Contest prep
-
-## 🐺 C4: Contest prep
-- [ ] Rename this repo to reflect contest date (if applicable)
-- [ ] Rename contest H1 below
-- [ ] Add link to report form in contest details below
-- [ ] Update pot sizes
-- [ ] Fill in start and end times in contest bullets below.
-- [ ] Move any relevant information in "contest scope information" above to the bottom of this readme.
-- [ ] Add matching info to the [code423n4.com public contest data here](https://github.com/code-423n4/code423n4.com/blob/main/_data/contests/contests.csv))
-- [ ] Delete this checklist.
-
-## ⭐️ Sponsor: Contest prep
-- [ ] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [ ] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2021-06-gro/blob/main/README.md))
-- [ ] Please have final versions of contracts and documentation added/updated in this repo **no less than 8 hours prior to contest start time.**
-- [ ] Ensure that you have access to the _findings_ repo where issues will be submitted.
-- [ ] Promote the contest on Twitter (optional: tag in relevant protocols, etc.)
-- [ ] Share it with your own communities (blog, Discord, Telegram, email newsletters, etc.)
-- [ ] Optional: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [ ] Delete this checklist and all text above the line below when you're ready.
-
----
-
 # PoolTogether Aave v3 contest details
-- $25,500 USDC main award pot
+- $20,500 USDC main award pot
 - $1,500 USDC gas optimization award pot
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-04-PoolTogether-Aave-v3-contest/submit)
@@ -70,6 +7,49 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - Starts April 29, 2022 00:00 UTC
 - Ends May 1, 2022 23:59 UTC
 
-This repo will be made public before the start of the contest. (C4 delete this line when made public)
+# Resources
 
-[ ⭐️ SPONSORS ADD INFO HERE ]
+- [Code on Github](https://github.com/pooltogether/aave-v3-yield-source/tree/e63d1b0e396a5bce89f093630c282ca1c6627e44)
+- [Documentation](https://dev.pooltogether.com/protocol/contracts/yield-sources/AaveV3YieldSource)
+
+# Contest Scope
+
+This is a contest to evaluate the Aave V3 Yield Source contract for PoolTogether.
+
+This contract adheres to the [Yield Source Interface](https://github.com/pooltogether/yield-source-interface/blob/main/contracts/IYieldSource.sol), which is a generic interface that allows a Yield Source Prize Pool to use an external contract to generate interest. As long as a contract supports the Yield Source Interface, it can be plugged into the Yield Source Prize Pool. This makes it easy to add new yield sources.
+
+This contract also adheres to the ERC20 standard and mints tokens to the Prize Pool when users deposit into it. These tokens represent the share of deposits owned by a Prize Pool. Users can then withdraw their deposits from the Prize Pool and these shares are then burnt. This flow is illustrated in the following diagrams:
+![Deposit Flow](./diagrams/Aave%20V3%20Yield%20Source%20-%20Deposit%20Flow.png "Deposit Flow")
+![Withdraw Flow](./diagrams/Aave%20V3%20Yield%20Source%20-%20Withdraw%20Flow.png "Withdraw Flow")
+
+You can learn more about PoolTogether V4 and how the Yield Source Prize Pool works at the following links:
+- [Smart Contracts Overview](https://dev.pooltogether.com/protocol/contracts/)
+- [Flow of Funds](https://dev.pooltogether.com/protocol/architecture/flow-of-funds)
+- [Yield Source Prize Pool Documentation](https://dev.pooltogether.com/protocol/contracts/v4-core/YieldSourcePrizePool)
+- [Yield Source Prize Pool Contract](https://github.com/pooltogether/v4-core/blob/master/contracts/prize-pool/YieldSourcePrizePool.sol)
+
+To learn more about Aave V3, you can read the documentation here:
+- [Aave V3 Documentation](https://docs.aave.com/developers/getting-started/readme)
+
+Only the following contract is part of the audit scope:
+
+| Contract Name | Source Lines of Code | Libraries | External Calls |
+| ------------- | -------------------- | ---------- | -------------- |
+| [AaveV3YieldSource](https://github.com/pooltogether/aave-v3-yield-source/blob/e63d1b0e396a5bce89f093630c282ca1c6627e44/contracts/AaveV3YieldSource.sol) | ~200 sLoC | [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts), [Manageable](https://github.com/pooltogether/owner-manager-contracts/blob/master/contracts/Manageable.sol) | [Aave V3 Pool](https://docs.aave.com/developers/core-contracts/pool), [Aave V3 RewardsController](https://docs.aave.com/developers/periphery-contracts/rewardscontroller)
+
+# Areas of Concern
+
+The main areas of concern are the following:
+- is the unlimited approval of the Aave V3 Pool contract safe? Focus on the [following line](https://github.com/pooltogether/aave-v3-yield-source/blob/e63d1b0e396a5bce89f093630c282ca1c6627e44/contracts/AaveV3YieldSource.sol#L183) and the functions `decreaseERC20Allowance` and `increaseERC20Allowance`.
+- are the shares being calculated correctly? Focus on the `_tokenToShares` and `_sharesToToken` functions. Keep in mind that aTokens’ value is pegged to the value of the corresponding supplied asset at a 1:1 ratio.
+- is the minting and burning of shares being done correctly? Focus on the `supplyTokenTo` and `redeemToken` functions.
+- is there any reentrancy attack possible? Focus on the functions to withdraw and deposit.
+- are functions being restricted correctly in term of ownership and managership?
+
+# Gas Optimization
+
+When suggesting gas optimizations, please run the `yarn test` command and write down the improvement in gas usage in your report. Don't forget to set the `REPORT_GAS` environment variable to `true` in order to generate the gas report.
+
+# Contact
+
+If you have any questions, don't hesitate to reach out to us on the C4 Discord channel setup for this contest.
