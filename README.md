@@ -19,8 +19,9 @@ This is a contest to evaluate the Aave V3 Yield Source contract for PoolTogether
 This contract adheres to the [Yield Source Interface](https://github.com/pooltogether/yield-source-interface/blob/main/contracts/IYieldSource.sol), which is a generic interface that allows a Yield Source Prize Pool to use an external contract to generate interest. As long as a contract supports the Yield Source Interface, it can be plugged into the Yield Source Prize Pool. This makes it easy to add new yield sources.
 
 This contract also adheres to the ERC20 standard and mints tokens to the Prize Pool when users deposit into it. These tokens represent the share of deposits owned by a Prize Pool. Users can then withdraw their deposits from the Prize Pool and these shares are then burnt. This flow is illustrated in the following diagrams:
-![Deposit Flow](./diagrams/Aave%20V3%20Yield%20Source%20-%20Deposit%20Flow.png "Deposit Flow")
-![Withdraw Flow](./diagrams/Aave%20V3%20Yield%20Source%20-%20Withdraw%20Flow.png "Withdraw Flow")
+![Deposit Flow](https://user-images.githubusercontent.com/85371239/165866541-a7ff64a6-7da7-47ac-bd1f-9d64da638d9d.png "Deposit Flow")
+
+![Withdraw Flow](https://user-images.githubusercontent.com/85371239/165866733-a7243a5a-8a50-4652-ab29-012ef8265409.png "Withdraw Flow")
 
 You can learn more about PoolTogether V4 and how the Yield Source Prize Pool works at the following links:
 - [Smart Contracts Overview](https://dev.pooltogether.com/protocol/contracts/)
