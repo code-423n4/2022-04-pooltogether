@@ -1,0 +1,337 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q2-2022 / ☑pooltogether-apr29
+==============================================================
+
+[09/28/2021 7:13 PM] itsmetechjay
+👋 Hello and welcome to the contest channel for the $105K USDC **PoolTogether v4 **contest! 
+
+📆 **Preview week** opens Sep 30, 2021 at 18:00 UTC and runs through Oct 6, 2021 at 23:59 UTC (one week).
+
+📆 **Contest** opens Oct 7, 2021 at 0:00 UTC and runs through Oct 13, 2021 at 23:59 UTC (one week).
+
+*Note: During the preview week, the repo and documentation are available to view and the sponsor is available to answer questions.  (Submissions are not accepted until the contest officially opens.)*
+
+Please give a warm welcome to @Brendan 🌊🏆 who will be available during this time to answer questions either here in channel or via DM. 
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, you might want to enable notifications. 🐺 ⏰
+
+{Reactions}
+👋 (5) 🎉 (3) 
+
+[09/30/2021 5:54 PM] asselstine
+👋 Whats up wolfpack! 👋
+
+:PoolTogether: The PoolTogether team is incredibly excited to have you all inspect our latest work.  Version 4 is a game-changer.  Literally.  We completely redesigned our prize savings game. 🏆
+
+I'll be here to answer any questions you have.  Architecture, deployment, concepts; anything at all.  Also happy to offer insight into our decision-making rationale, so that you understand the 'why' as well as the 'how'.
+
+🗨️  Feel free to dm me, whether through Discord or email: brendan@pooltogether.com.
+
+🔍  The contest repo is here: <https://github.com/code-423n4/2021-10-pooltogether>
+
+📜  The V4 documentation is here: <https://v4.docs.pooltogether.com/>
+
+Happy hunting!
+
+{Reactions}
+👋 (8) PoolTogether (7) 
+
+[10/07/2021 12:07 AM] asselstine
+🐺  Heads up: 🐺 
+
+🔍 We conducted our own internal audit this week.  Our fixes have been pushed out to the repos. 🔍 
+
+🔒 Now that the audit has begun in earnest, we have locked the Audit repo to the 'gold' commit. 🔒
+
+The links in the repo are now permalinks so there will be no more changes!
+
+Thanks for your patience, and good luck!
+
+{Reactions}
+hi5 (5) 
+
+[10/08/2021 4:58 PM] asselstine
+Good morning wardens!  We discovered a few variables hadn't been renamed in the `v4-timelocks` repo.  We've pushed a change to make it consistent with `v4-core`. 
+
+The Contest Repo's permalinks have been updated.  No more changes after this!  🤝 
+
+We've also noticed a number of typos and inconsistencies in the v4 documentation: <https://v4.docs.pooltogether.com>.  These have now been fixed- but if you spot anything else let us know!
+
+{Reactions}
+thankyou (4) 
+
+[10/14/2021 8:14 AM] asselstine
+Thanks everyone!  Lots of great issues were brought up.  You’ve made this a solid release.
+
+{Reactions}
+😋 (4) 👍 (4) 🎉 (3) 
+
+[12/07/2021 9:34 PM] itsmetechjay
+👋 Hello and welcome (back) to the contest channel for the $25K USDC **PoolTogether TwabRewards** contest.
+
+📆 Contest opens December 9, 2021, at 0:00 UTC and runs through December 12, 2021 at 23:59 UTC (4 days).
+
+Please say hello to @Brendan 🌊🏆 and @Pierrick who will be available during the contest to answer questions either here in channel or via DM. 
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, you might want to enable notifications. 🐺 ⏰
+
+{Reactions}
+👋 
+
+[12/09/2021 12:09 AM] asselstine
+🐺  Hello again wolfpack! 🐺 
+
+This week you'll looking at our new TwabRewards contract.  This contract rewards ticket holders with incentives, but holders don't need to stake!  The TwabReward contract can measure a ticket holder's share of liquidity thanks to the TWAB <https://dev.pooltogether.com/protocol/concepts/time-weight-average-balance>
+
+We'll also have a new sponsor from whom you can ask questions: @Pierrick!  Ask either of us any questions you have.
+
+🗨️  Feel free to dm us, whether through Discord or email: brendan@pooltogether.com.
+
+🔍  The contest repo is here: <https://github.com/code-423n4/2021-12-pooltogether>
+
+📜  The V4 documentation is here: https://dev.pooltogether.com/
+
+{Embed}
+https://dev.pooltogether.com/
+PoolTogether Docs | PoolTogether
+Technical Documentation For The PoolTogether Protocol
+
+{Reactions}
+👋 (3) 
+
+[12/10/2021 11:33 AM] unclegrandpa925
+Hi @Pierrick , just dropped you a friend request to ask some questions. Thanks!
+
+
+[12/10/2021 7:49 PM] asselstine
+Great @UncleGrandpa925 !
+
+
+[12/12/2021 11:01 PM] asselstine
+Hello everyone @Amssre!
+
+I just want to say that I’ve been impressed by your questions and insights.  This audit has been particularly lively!
+
+Keep up the great work wolfpack 🐺
+
+{Reactions}
+nice (3) 🐺 (3) 
+
+[12/13/2021 12:02 AM] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **PoolTogether TwabRewards** contest is now closed! Huge thanks to everyone who participated🔍, whether you submitted a finding or not.
+
+What's next: the PoolTogether team will review the findings over the next couple of days, and then we'll pass them off to the judge. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping an organizer if you have questions along the way!
+
+
+[12/13/2021 3:47 PM] alextheentreprenerd
+Totally random question @Brendan 🌊🏆 but do you feel like TWAB would save you gas over accruing user points each time their balance changes?
+
+
+[12/13/2021 4:43 PM] asselstine
+> Totally random question @Brendan 🌊🏆 but do you feel like TWAB would save you gas over accruing user points each time their balance changes?
+@Alex The Entreprenerd  are you saying points in lieu of the twab?
+
+Points you’d have to claim then deposit for each prize period.  So I think overall it would be cheaper gas, but the TWAB alone adds 50-90k gas for a token transfer.
+
+
+[12/13/2021 4:44 PM] asselstine
+So if you’re considering individual transfers the TWAB will be more expensive than many things
+
+
+[12/13/2021 4:45 PM] asselstine
+You’d need to fully clarify the use case to determine what mechanism supports the feature most efficiently
+
+
+[12/13/2021 5:27 PM] alextheentreprenerd
+I'm thinking of a similar use-case as yours
+We give point over time based on share ownership
+After X time we know how many rewards to distribute
+We can then calculate the points (shares * time) to know how to distribute
+
+
+[12/13/2021 5:27 PM] alextheentreprenerd
+We would use it to distribute non-want tokens on vaults (extra tokens fairly distributed)
+
+
+[12/13/2021 5:53 PM] asselstine
+Ah
+
+
+[12/13/2021 5:53 PM] asselstine
+Yes it fits that use case perfectly
+
+
+[12/13/2021 5:54 PM] asselstine
+The only thing it doesn't do is compounding.  Compounding is kind of faked, anyhow, in most contracts
+
+
+[12/13/2021 5:55 PM] asselstine
+The other advantage of the TWAB is that users don't need to explicitly stake.  You just create a new "promotion" on the TWAB and drop tokens
+
+
+[12/13/2021 5:55 PM] asselstine
+You can drop more than one token too; as many as you want
+
+
+[12/13/2021 5:55 PM] asselstine
+Then users just claim when they want to pull tokens out
+
+
+[12/13/2021 6:37 PM] alextheentreprenerd
+Sounds great, will look into it!
+
+{Reactions}
+👍 
+
+[02/21/2022 6:37 PM] itsmetechjay
+Hello (again) and welcome (back) to the contest channel for a new PoolTogether contest: **$30K USDC PoolTogether TWAB Delegator.**
+
+📆 Contest opens February 22, 2022, at 0:00 UTC (in about 5.5 hours!) and runs through February 24, 2022 at 23:59 UTC (3 days).
+
+Please say hello to @Brendan 🌊🏆 and @Pierrick who will be available during the contest to answer questions either here in channel or via DM. 
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, you might want to enable notifications. 🐺 ⏰
+
+{Reactions}
+👋 (2) 
+
+[02/21/2022 10:34 PM] asselstine
+🐺  Hello again wolfpack! 🐺 
+
+This week you'll looking at TWAB Delegation contract.  This contract will allow users to delegate a *portion* of their tickets to another user. This will be an important building block for PT V4 ticket derivatives.
+
+🔍  The contest repo is here: <https://github.com/code-423n4/2022-02-pooltogether>
+📜  V4 Documentation: <https://dev.pooltogether.com/>
+🤖  TWAB Delegator code on Github: <https://github.com/pooltogether/v4-twab-delegator/>
+
+Reach out to myself or @Pierrick if you have any questions!
+
+{Reactions}
+👋 (2) 👀 
+
+[02/22/2022 4:45 PM] cloudellie
+Quick note - we forgot to include the commit hash in the readme, and will be amending shortly. But the commit to use is the latest one: 2b6d42506187dd7096043e2dfec65fa06ab18577
+
+
+[02/22/2022 5:13 PM] itsmetechjay
+We've updated the readme to include those commit links.
+
+{Reactions}
+hi5 
+
+[02/23/2022 9:59 PM] rhynorater
+LMK if anyone wants to compare notes on this one before the end of the contest! Collaboration usually ends up kicking out better results
+
+{Reactions}
+🤝 🚀 
+
+[02/24/2022 9:32 PM] pedroais
+@Brendan 🌊🏆 what's the purpose of having time locks on delegations ?
+
+
+[02/24/2022 9:40 PM] asselstine
+@Pedroais So that the delegatee has a guarantee that the delegation will last a minimum length of time
+
+
+[02/24/2022 9:43 PM] pedroais
+Makes sense
+
+
+[02/25/2022 12:02 AM] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **PoolTogether TWAB Delegator** contest is now closed! Huge thanks to everyone who participated🔍, whether you submitted a finding or not.
+
+What's next: the PoolTogether team will review the findings over the next couple of days, and then we'll pass them off to the judge. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping an organizer if you have questions along the way!
+
+{Reactions}
+🙌 (2) 
+
+[02/25/2022 12:09 AM] ch#2135
+First time doing one, was a great time! Couldn't find much but learned more about minimal proxies while trying to hack it! Thanks for the opportunity and will definitely be participating more in the future as well
+
+
+[02/25/2022 1:19 AM] kenta#0163
+@Jay | C4
+
+
+[02/25/2022 1:25 AM] kenta#0163
+Hi, i send my finding for gas optimization and QA separately 2.5 hours ago.  For gas optimization i received an submissions email after 1 hour, but not for QA Report. Could you tell me if my QA report reached the team or not?
+
+{Reactions}
+👀 
+
+[02/25/2022 2:25 AM] refcell
+Not easy to ward a warden ;P
+
+
+[02/25/2022 2:29 AM] itsmetechjay
+We received both a gas and QA report for you.
+
+
+[02/25/2022 2:32 AM] kenta#0163
+I have a problem with submissions email sometimes. thank you for your answer.
+
+
+[02/25/2022 2:37 AM] itsmetechjay
+totally understand. you're welcome!
+
+{Reactions}
+C4Keycap 
+
+[04/26/2022 5:50 PM] kartoonjoy
+Hello and welcome back to the contest channel for a new PoolTogether contest: **$22K USDC PoolTogether Aave v3.**
+
+📆 Contest opens April 29, 2022, at 0:00 UTC and runs through May 1, 2022 at 23:59 UTC (3 days).
+
+Please say hello to @Brendan 🌊🏆 and @Pierrick who will be available during the contest to answer questions either here in channel or via DM. 
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, you might want to enable notifications. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2022-04-pooltogether-aave-v3-contest
+
+{Embed}
+https://code4rena.com/contests/2022-04-pooltogether-aave-v3-contest
+Code4rena PoolTogether Aave v3 contest
+$22,000 USDC
+29 April 2022—1 May 2022
+Code4rena - ARCHIVE-Q2-2022 - ☑pooltogether-apr29 [892486543288193074].txt_Files/C4-banner-7C19B.png
+
+{Reactions}
+🙌 PoolTogether (4) poolonfire (2) 
+
+[04/29/2022 2:53 PM] pierrickgt
+Thanks for the introduction @kartoonjoy | C4 🎇🎇 !
+Hello Wardens, glad to be back for another audit.
+If you have any questions, don't hesitate to reach out to @Brendan 🌊🏆 or me.
+Looking forward to see what you will find!
+
+{Reactions}
+👋 (9) 🎉 (6) 
+
+[05/02/2022 12:02 AM] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The PoolTogether Aave v3 contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: the PoolTogether team will review the findings over the next couple of days, and then we'll pass them off to the judge. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+
+[05/06/2022 2:54 PM] miguelmtzinf#3878
+Hey, is there any update on this? first time participating, not sure about the process hehe
+
+
+[05/06/2022 3:04 PM] 0xdjango
+Check out Wednesday's announcement post that showed that this contest is still in Sponsor review: https://discordapp.com/channels/810916927919620096/810929015509483554/971526540535935017
+
+I think C4 does a usual Friday rollup as well
+
+{Reactions}
+thankyou (2) 
+
+==============================================================
+Exported 45 message(s)
+==============================================================
